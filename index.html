@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhagyashree's Dream Universe ✨</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #fff7ff;
+  text-align: center;
+  background: radial-gradient(ellipse at top, #49206e 0%, #171038 48%, #070817 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white 99%, transparent),
+    radial-gradient(2px 2px at 70% 20%, #ffdaff 99%, transparent),
+    radial-gradient(1px 1px at 40% 80%, white 99%, transparent),
+    radial-gradient(2px 2px at 85% 65%, #d7c3ff 99%, transparent),
+    radial-gradient(1px 1px at 10% 70%, white 99%, transparent);
+  background-size: 190px 190px;
+  animation: twinkle 5s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+
+main {
+  position: relative;
+  max-width: 760px;
+  margin: auto;
+  padding: 28px 18px 60px;
+}
+
+.planet {
+  font-size: 70px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+h1 {
+  font-size: clamp(35px, 8vw, 60px);
+  margin: 12px 0;
+  background: linear-gradient(90deg, #ffe3a9, #ffb7e7, #c6b7ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h2 { color: #ffd9f2; }
+
+.subtitle {
+  color: #e2d6ff;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.card {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,220,255,.28);
+  border-radius: 22px;
+  padding: 22px;
+  margin: 20px 0;
+  box-shadow: 0 0 25px rgba(206,135,255,.09);
+  backdrop-filter: blur(6px);
+}
+
+button {
+  border: 1px solid #f5c7ff;
+  background: linear-gradient(135deg, #b76ad8, #7956c9);
+  color: white;
+  padding: 13px 19px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 7px;
+}
+
+button:hover { transform: scale(1.04); }
+
+.hidden { display: none; }
+
+.star-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.star-button {
+  background: rgba(255,255,255,.09);
+  font-size: 16px;
+  min-width: 125px;
+}
+
+.message {
+  color: #fff0fc;
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+.photo-placeholder {
+  border: 1px dashed #e8c8ff;
+  padding: 22px 10px;
+  border-radius: 16px;
+  color: #e5d4ff;
+  margin: 12px 0;
+}
+
+footer {
+  color: #cfc0e8;
+  font-size: 13px;
+  margin-top: 35px;
+}
+
+.heart { color: #ffb3dc; }
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+
+<main>
+  <div class="planet">🌙✨</div>
+
+  <p>✦ A LITTLE UNIVERSE MADE JUST FOR YOU ✦</p>
+  <h1>Happy Birthday,<br>Bhagyashree!</h1>
+
+  <p class="subtitle">
+    Today, the stars shine a little brighter<br>
+    because someone as special as you was born. 💗
+  </p>
+
+  <button onclick="document.getElementById('welcome').scrollIntoView({behavior:'smooth'})">
+    Enter Your Universe ✨
+  </button>
+
+  <section class="card" id="welcome">
+    <h2>🌌 Your Own Little Universe</h2>
+    <p class="message">
+      Dear Bhagyashree,
+
+      This is not just a birthday page.
+      It's a little world filled with love,
+      blessings, memories and dreams —
+      all created to remind you how precious you are.
+
+      May life give you a thousand reasons to smile,
+      courage for every challenge,
+      and happiness beyond your imagination. 💫
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>⭐ Tap a Star, Open a Wish</h2>
+    <p class="subtitle">Every star has a little message for you.</p>
+
+    <div class="star-buttons">
+      <button class="star-button" onclick="showWish('wish1')">⭐ Star of Love</button>
+      <button class="star-button" onclick="showWish('wish2')">🌙 Star of Dreams</button>
+      <button class="star-button" onclick="showWish('wish3')">💖 Star of Happiness</button>
+      <button class="star-button" onclick="showWish('wish4')">🦋 Star of Growth</button>
+      <button class="star-button" onclick="showWish('wish5')">👑 Star of Your Future</button>
+    </div>
+
+    <div class="card">
+      <p id="wishText" class="message">Choose a star above to reveal your wish ✨</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>💌 Letters From Your People</h2>
+    <p class="subtitle">Little reminders of how much you mean to your family.</p>
+
+    <button onclick="showWish('aai')">❤️ Aai's Blessings</button>
+    <button onclick="showWish('baba')">💙 Baba's Blessings</button>
+    <button onclick="showWish('sister')">🫶 Bahin's Love</button>
+    <button onclick="showWish('brother')">🤍 Bhau's Love</button>
+    <button onclick="showWish('couple')">💌 Bhaiya & Bhabhi</button>
+
+    <div class="card">
+      <p id="letterText" class="message">Choose a letter to read a heartfelt message 💌</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📸 Our Memory Galaxy</h2>
+    <p class="subtitle">
+      Some moments become memories.<br>
+      Some people make those memories priceless.
+    </p>
+
+    <div class="photo-placeholder">
+      🌷 Memory One<br>
+      <small>Add your favourite family photo here</small>
+    </div>
+    <div class="photo-placeholder">
+      🧸 Memory Two<br>
+      <small>A moment you never want to forget</small>
+    </div>
+    <div class="photo-placeholder">
+      💫 Memory Three<br>
+      <small>A picture full of laughter and love</small>
+    </div>
+
+    <p class="subtitle">
+      Photo spaces are ready for your memories.
+      You can add actual photos after publishing the website.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🗺️ Your Dream Map</h2>
+    <p class="subtitle">May your journey take you to beautiful places.</p>
+    <p class="message">
+      🌟 A dream that comes true<br>
+      🌷 A life full of peace<br>
+      💫 Success that makes you proud<br>
+      🦋 Freedom to become who you want to be<br>
+      🏡 A home filled with love<br>
+      💖 People who celebrate your happiness
+    </p>
+    <p>May you never stop believing in yourself.</p>
+  </section>
+
+  <section class="card">
+    <h2>🎁 One Last Surprise</h2>
+    <p class="subtitle">There's something we want you to remember forever.</p>
+    <button onclick="revealSurprise()">Open Your Surprise 💝</button>
+
+    <div id="surprise" class="hidden">
+      <h2>💖 You Are So Loved 💖</h2>
+      <p class="message">
+        Bhagyashree,
+
+        Never measure your worth by one difficult day,
+        one mistake or one person's opinion.
+
+        You have your own light.
+        You have dreams worth chasing.
+        You have a future full of possibilities.
+
+        Keep smiling, keep growing,
+        and keep being beautifully YOU.
+
+        Wherever life takes you,
+        remember that your family is cheering for you.
+
+        You deserve happiness, love and every beautiful
+        thing your heart quietly wishes for.
+
+        Happy Birthday, once again! 🎂✨
+
+        With lots of love,
+        Bhaiya & Bhabhi ❤️
+      </p>
+      <div style="font-size:40px">🎂 💐 💖 🌟 🦋</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🎶 A Little Birthday Music</h2>
+    <p class="subtitle">
+      Add your favourite birthday song using the music button below.
+    </p>
+    <input id="musicFile" type="file" accept="audio/*">
+    <br>
+    <button onclick="playMusic()">Play Music 🎵</button>
+    <audio id="player" controls loop style="width:100%; margin-top:12px;"></audio>
+    <p class="subtitle">Choose an audio file from your device to play it here.</p>
+  </section>
+
+  <footer>
+    Made with endless love <span class="heart">♥</span><br>
+    A little universe for Bhagyashree · Forever special ✨
+  </footer>
+</main>
+
+<script>
+const wishes = {
+  wish1: "You are loved more than words can explain. Never forget that there are people who are genuinely happy to see you smile. 💖",
+  wish2: "May every dream that makes your eyes sparkle slowly become a beautiful part of your reality. Keep dreaming big! 🌙",
+  wish3: "May your days be full of little joys, unexpected surprises, warm hugs and reasons to laugh until your cheeks hurt. 🌷",
+  wish4: "May you grow into the person you dream of becoming, at your own pace, in your own beautiful way. 🦋",
+  wish5: "Your story is still unfolding, and so many beautiful chapters are waiting for you. The best is yet to come. 👑",
+
+  aai: "My dear daughter, may you always stay happy, healthy and blessed. May you find strength in difficult moments and joy in every new beginning. My love and blessings are always with you. ❤️",
+
+  baba: "May you always walk with confidence, courage and kindness. Keep working towards your dreams and never underestimate your abilities. Wishing you a bright and beautiful future. 💙",
+
+  sister: "No matter how much we grow up, some bonds will always feel like home. May your life be filled with laughter, love, adventures and endless happiness. Love you! 🫶",
+
+  brother: "Keep smiling, keep dreaming and keep shining. May every new year bring you closer to everything you wish for. Always remember how special you are to us. 🤍",
+
+  couple: "Dear Bhagyashree, on your birthday, we wish you a life full of happiness, confidence, success and beautiful surprises. Never stop dreaming, never doubt your worth, and always remember that you have so much potential within you. May this new chapter bring you everything your heart hopes for. Lots of love from Bhaiya & Bhabhi! 💖"
+};
+
+function showWish(key) {
+  if (key.startsWith("wish")) {
+    document.getElementById("wishText").textContent = wishes[key];
+  } else {
+    document.getElementById("letterText").textContent = wishes[key];
+  }
+}
+
+function revealSurprise() {
+  const box = document.getElementById("surprise");
+  box.classList.remove("hidden");
+  box.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+document.getElementById("musicFile").addEventListener("change", function() {
+  const file = this.files[0];
+  if (file) {
+    document.getElementById("player").src = URL.createObjectURL(file);
+  }
+});
+
+function playMusic() {
+  const player = document.getElementById("player");
+  if (!player.src) {
+    alert("Please choose a music file first 🎵");
+    return;
+  }
+  player.play().catch(() => alert("Tap the play button on the music player."));
+}
+</script>
+</body>
+</html>
