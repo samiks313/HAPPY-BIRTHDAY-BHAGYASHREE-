@@ -3,184 +3,297 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bhagyashree's Little Dreamland 🎀</title>
+<title>Bhagyashree's Magical Birthday 🎀</title>
 <style>
 :root{
- --pink:#f8c8dc;--rose:#e995b9;--lav:#e8dafa;
- --cream:#fff9f2;--purple:#80618f;--ink:#684b65;
+ --pink:#f8c9df;--rose:#dc8eb4;--lav:#e9ddff;
+ --cream:#fff9f3;--ink:#76566e;--white:#fff;
 }
 *{box-sizing:border-box}
 body{
  margin:0;background:var(--cream);color:var(--ink);
  font-family:"Trebuchet MS",Arial,sans-serif;text-align:center;
+ overflow-x:hidden;
 }
-header{padding:15px 12px;background:#fff0f6;border-bottom:1px solid #f3d4e3}
-.brand{font-family:Georgia,serif;font-size:1.15rem;color:#a65f87}
-nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:12px 8px;background:#fff8fb}
+header{padding:16px 10px;background:#fff0f6;border-bottom:1px solid #f4d7e5}
+.brand{font-family:Georgia,serif;font-size:1.15rem;color:#b56e96}
+nav{position:sticky;top:0;z-index:20;background:#fff9f3eF;
+ display:flex;justify-content:center;flex-wrap:wrap;gap:5px;padding:10px 5px;
+ backdrop-filter:blur(10px)}
 button{
- border:0;border-radius:22px;padding:11px 17px;margin:4px;
- background:#f3c5da;color:#744b69;font-weight:bold;font-size:.9rem;
- box-shadow:0 3px 0 #e4a9c5;cursor:pointer;
+ border:0;border-radius:24px;padding:11px 15px;margin:5px;
+ background:#f5c5dc;color:#754b69;font-weight:bold;cursor:pointer;
+ box-shadow:0 3px 0 #e2a8c6;font-size:.9rem;
 }
-button:hover{transform:translateY(-2px)}
-button:active{transform:translateY(1px)}
-button.secondary{background:#e9dcfa;box-shadow:0 3px 0 #d2bee9}
-button.cream{background:#fff0ce;box-shadow:0 3px 0 #f0d9a3}
-.page{display:none;min-height:75vh;padding:30px 17px 45px;animation:fade .3s}
+button:hover{filter:brightness(1.03);transform:translateY(-2px)}
+button.lav{background:#e7d9fc;box-shadow:0 3px 0 #cdb8e8}
+button.gold{background:#ffedc5;box-shadow:0 3px 0 #e9d294}
+.page{display:none;min-height:78vh;padding:30px 15px 45px;animation:appear .4s}
 .page.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 h1,h2,h3{font-family:Georgia,serif}
-h1{font-size:clamp(2.1rem,8vw,3.5rem);color:#c16e9b;margin:15px 0}
-h2{color:#b56e9a}
+h1{font-size:clamp(2.2rem,8vw,3.6rem);color:#c16f9c;margin:15px 0}
+h2{color:#b46d97}
 p{line-height:1.8}
-.hero{max-width:680px;margin:12px auto;background:#fff0f6;border:2px solid white;
- border-radius:35px;padding:28px 18px;box-shadow:0 8px 25px #d9b0c744}
-.emoji{font-size:2rem}
-.flower{font-size:1.2rem;letter-spacing:7px}
-.card{
- max-width:550px;margin:20px auto;padding:22px 18px;
- background:white;border:2px solid #f7dce9;border-radius:25px;
- box-shadow:0 6px 18px #d9b0c733;
+.hero{max-width:680px;margin:10px auto;background:linear-gradient(145deg,#fff0f6,#f5eaff);
+ border:2px solid white;border-radius:32px;padding:27px 17px;
+ box-shadow:0 8px 30px #d8afc544}
+.card{max-width:570px;margin:20px auto;padding:22px 17px;
+ background:white;border:2px solid #f5dce9;border-radius:25px;
+ box-shadow:0 7px 22px #d9b0c533}
+.photo{width:100%;max-width:380px;max-height:470px;object-fit:cover;
+ border-radius:20px;border:4px solid #fff0f6;box-shadow:0 5px 18px #cfa5bf44}
+.emoji{font-size:2.2rem}
+.name{font-family:Georgia,serif;color:#b36c96;font-size:1.35rem}
+.small{font-size:.9rem;color:#987e91}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+ gap:12px;max-width:720px;margin:22px auto}
+.tile{background:#fff0f6;border:1px solid #f2d6e5;padding:14px 7px;border-radius:22px}
+.tile button{max-width:100%}
+.hidden{display:none!important}
+footer{padding:22px;background:#fff0f6;color:#a46d8d}
+input{padding:13px;border:1px solid #e7b9d0;border-radius:18px;
+ width:92%;max-width:340px;font-size:1rem}
+audio{width:100%;max-width:340px;margin:8px auto}
+.divider{color:#d99abd;letter-spacing:7px}
+
+/* Fairy-light gift scene */
+.gift-scene{
+ position:relative;overflow:hidden;max-width:560px;margin:22px auto;
+ min-height:500px;padding:30px 12px 20px;border-radius:30px;
+ background:radial-gradient(ellipse at center,#fff0f8 0%,#f0e2ff 48%,#e3c8f2 100%);
+ border:2px solid white;box-shadow:0 0 28px #d6a4e788;
 }
-.photo{width:100%;max-width:370px;max-height:450px;object-fit:cover;
- border-radius:20px;border:4px solid #fff0f6}
-.name{color:#b36b96;font-family:Georgia,serif;font-size:1.3rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;max-width:700px;margin:20px auto}
-.tile{background:#fff0f6;padding:17px 8px;border-radius:22px;border:1px solid #f4d3e3}
-.tile button{width:90%}
-.small{font-size:.9rem;color:#96798d}
-footer{padding:22px;background:#fff0f6;color:#a46c8c}
-.hidden{display:none}
-input{border:1px solid #e7b8d0;border-radius:15px;padding:12px;width:90%;max-width:330px;font-size:1rem}
+.gift-scene:before,.gift-scene:after{
+ content:"";position:absolute;width:220px;height:220px;border-radius:50%;
+ background:#fff7cc;filter:blur(55px);opacity:.65;animation:glow 2s infinite alternate;
+}
+.gift-scene:before{top:-70px;left:-60px}
+.gift-scene:after{right:-60px;bottom:-70px;background:#ffc5e5}
+@keyframes glow{from{opacity:.3;transform:scale(.8)}to{opacity:.8;transform:scale(1.2)}}
+.lights{position:absolute;inset:12px 8px 20px;pointer-events:none;z-index:1}
+.bulb{position:absolute;width:10px;height:10px;border-radius:50%;
+ background:#fff7ad;box-shadow:0 0 8px 4px #fff4a8,0 0 20px 7px #ffd9f1;
+ animation:twinkle 1.1s infinite alternate}
+.bulb:nth-child(3n){background:#ffaad7;box-shadow:0 0 8px 4px #ffaad7,0 0 18px 5px #ffcce9}
+.bulb:nth-child(2n){animation-delay:.5s}
+@keyframes twinkle{from{opacity:.35;transform:scale(.75)}to{opacity:1;transform:scale(1.25)}}
+.teddy-area{position:relative;z-index:2;padding-top:20px}
+.teddy{
+ position:relative;width:220px;height:260px;margin:28px auto 10px;
+ animation:bob 2.5s ease-in-out infinite;
+ filter:drop-shadow(0 12px 12px #aa79b955);
+}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+.ear{position:absolute;top:5px;width:65px;height:70px;border-radius:50%;
+ background:linear-gradient(140deg,#d5a17d,#a76d52);border:3px solid #b98261}
+.ear:after{content:"";position:absolute;inset:13px;border-radius:50%;background:#f2b6c9}
+.ear.left{left:22px;transform:rotate(-22deg)}
+.ear.right{right:22px;transform:rotate(22deg)}
+.head{position:absolute;top:25px;left:35px;width:150px;height:140px;
+ border-radius:48% 48% 46% 46%;background:linear-gradient(140deg,#e9c29f,#b98261);
+ border:3px solid #b98261;z-index:2}
+.muzzle{position:absolute;top:77px;left:42px;width:68px;height:49px;
+ border-radius:50%;background:#f9e4ce}
+.nose{position:absolute;top:84px;left:68px;width:18px;height:12px;
+ background:#684657;border-radius:50%;z-index:3}
+.eye{position:absolute;top:63px;width:10px;height:13px;border-radius:50%;background:#4c3441;z-index:3}
+.eye.left{left:38px}.eye.right{right:38px}
+.cheek{position:absolute;top:87px;width:20px;height:10px;border-radius:50%;
+ background:#ed9db7;opacity:.9;z-index:4}
+.cheek.left{left:22px}.cheek.right{right:22px}
+.bodybear{position:absolute;top:145px;left:44px;width:132px;height:108px;
+ border-radius:48% 48% 40% 40%;background:linear-gradient(140deg,#e6bf9d,#b98261);
+ border:3px solid #b98261}
+.belly{position:absolute;top:22px;left:25px;width:76px;height:66px;
+ border-radius:50%;background:#f7dfc7}
+.arm{position:absolute;top:157px;width:48px;height:76px;border-radius:50%;
+ background:linear-gradient(140deg,#e6bf9d,#b98261);border:3px solid #b98261;z-index:-1}
+.arm.left{left:17px;transform:rotate(28deg)}
+.arm.right{right:17px;transform:rotate(-28deg)}
+.foot{position:absolute;bottom:-3px;width:66px;height:38px;border-radius:50%;
+ background:#c28c68;border:3px solid #b98261}
+.foot.left{left:38px}.foot.right{right:38px}
+.bow{position:absolute;top:17px;left:94px;width:36px;height:23px;z-index:5;transform:rotate(-12deg)}
+.bow:before,.bow:after{content:"";position:absolute;top:0;width:19px;height:20px;
+ background:#f36eab;border:2px solid #dc5593}
+.bow:before{left:0;border-radius:70% 20% 70% 20%;transform:rotate(15deg)}
+.bow:after{right:0;border-radius:20% 70% 20% 70%;transform:rotate(-15deg)}
+.bow span{position:absolute;top:6px;left:14px;width:9px;height:10px;background:#ffb8d7;
+ border-radius:50%;z-index:2}
+.teddy-label{font-family:Georgia,serif;color:#a35d91;font-size:1.3rem;
+ text-shadow:0 0 12px white}
+.giftbox{font-size:3.5rem;animation:bob 1.5s infinite}
 </style>
 </head>
-<body>
-<header><div class="brand">♡ Bhagyashree's Little Dreamland ♡</div></header>
 
+<body>
+<header><div class="brand">♡ Bhagyashree's Magical Birthday ♡</div></header>
 <nav>
-<button onclick="showPage('home')">🏠 Home</button>
-<button onclick="showPage('memories')" class="secondary">📸 Memories</button>
-<button onclick="showPage('letters')">💌 Letters</button>
-<button onclick="showPage('wishes')" class="cream">🌷 Wishes</button>
-<button onclick="showPage('surprise')" class="secondary">🎁 Surprise</button>
+ <button onclick="showPage('home')">🏠 Home</button>
+ <button class="lav" onclick="showPage('memories')">📸 Memories</button>
+ <button onclick="showPage('letters')">💌 Letters</button>
+ <button class="gold" onclick="showPage('wishes')">🌷 Wishes</button>
+ <button class="lav" onclick="showPage('surprise')">🎁 Gift</button>
 </nav>
 
 <main>
 <section id="home" class="page active">
  <div class="hero">
-  <div class="flower">🌸 🦋 🌸</div>
+  <div class="divider">🌸 ♡ 🦋 ♡ 🌸</div>
   <div class="emoji">🎀 🧸 🎀</div>
-  <p>✨ A tiny website made with a whole lot of love ✨</p>
+  <p>✨ A little world made with endless love ✨</p>
   <h1>Happy Birthday,<br>Bhagyashree! 💗</h1>
-  <p>Today is all about YOU — your smile, your dreams, and all the beautiful things waiting for you.</p>
-  <button onclick="showPage('memories')">Let's Explore 💕</button>
-  <button class="secondary" onclick="showPage('letters')">Read Your Letters 💌</button>
-  <p class="small">A little world made especially for you ♡</p>
+  <p>Today, every little star shines just for you. May your life be as beautiful as your heart and as magical as your dreams.</p>
+  <button onclick="showPage('memories')">Enter Your Dreamland 💕</button>
+  <button class="lav" onclick="showPage('surprise')">A Gift for You 🎁</button>
+  <p class="small">Made with love, hugs, and a little bit of magic ♡</p>
+ </div>
+ <div class="card">
+  <h2>🎵 Your Birthday Song</h2>
+  <p>A little melody for your special day.</p>
+  <audio id="birthdaySong" controls loop>
+   <source src="birthday-song.mp3" type="audio/mpeg">
+   Your browser does not support this audio.
+  </audio>
+  <p class="small">Upload your chosen MP3 as <b>birthday-song.mp3</b> beside this HTML file.</p>
  </div>
  <div class="grid">
-  <div class="tile">🌷<p>Memories</p><button onclick="showPage('memories')">Open</button></div>
-  <div class="tile">💌<p>Love Letters</p><button class="secondary" onclick="showPage('letters')">Open</button></div>
-  <div class="tile">🎂<p>Birthday Wish</p><button class="cream" onclick="showPage('wishes')">Open</button></div>
-  <div class="tile">🎁<p>Secret Surprise</p><button onclick="showPage('surprise')">Open</button></div>
+  <div class="tile">📸<p>Beautiful Memories</p><button onclick="showPage('memories')">Explore</button></div>
+  <div class="tile">💌<p>Family Letters</p><button class="lav" onclick="showPage('letters')">Read</button></div>
+  <div class="tile">🌷<p>Make a Wish</p><button class="gold" onclick="showPage('wishes')">Wish</button></div>
+  <div class="tile">🧸<p>Special Gift</p><button class="lav" onclick="showPage('surprise')">Open</button></div>
  </div>
 </section>
 
 <section id="memories" class="page">
- <div class="emoji">📸 🌷 🦋</div>
- <h1>Our Memory Garden</h1>
- <p>Every picture holds a little piece of our story. 💕</p>
+ <div class="emoji">📸 🌷 🦋</div><h1>Our Memory Garden</h1>
+ <p>Every photo holds a little piece of our love. 💗</p>
+
  <div class="card">
-  <img class="photo" src="AP000220.jpg" alt="Family memory">
-  <h3>Our Family, Our World ❤️</h3>
+  <img class="photo" src="AP000220.jpg" alt="Family photo">
+  <h3 class="name">Our Family, Our World ❤️</h3>
+  <p>One family, a million memories, and a love that keeps growing. Wherever life takes you, you will always have a home in our hearts.</p>
  </div>
+
  <div class="card">
   <img class="photo" src="AP000225.jpg" alt="Baba">
-  <h3>Baba 💙</h3>
+  <h3 class="name">Baba's Love 💙</h3>
+  <p>बाळा, तुला वाढदिवसाच्या खूप खूप शुभेच्छा! तुझ्या आयुष्यात नेहमी आनंद, सुख आणि यश येवो. तुझी प्रत्येक इच्छा पूर्ण होवो आणि तुझ्या चेहऱ्यावरचं हसू असंच कायम राहो. बाबा म्हणून तुला नेहमी आनंदी पाहणं, हेच माझं सर्वात मोठं सुख आहे.</p>
  </div>
+
  <div class="card">
   <img class="photo" src="AP000228.jpg" alt="Aai">
-  <h3>Aai 🌷</h3>
+  <h3 class="name">Aai's Blessings 🌷</h3>
+  <p>माझ्या लाडक्या लेकीला वाढदिवसाच्या खूप खूप शुभेच्छा! देव तुला नेहमी सुखी, निरोगी आणि आनंदी ठेवो. तुझ्या आयुष्यातील प्रत्येक दिवस सुंदर जावो आणि तुझी सर्व स्वप्नं पूर्ण होवोत. माझे आशीर्वाद आणि प्रेम नेहमी तुझ्यासोबत आहेत.</p>
  </div>
+
  <div class="card">
   <img class="photo" src="AP000409.jpg" alt="Tai">
-  <h3>Tai 💗</h3>
+  <h3 class="name">Tai's Love 💕</h3>
+  <p>No matter how much we grow up, you will always be someone I want to support and see smiling. May you chase every dream with confidence and always find reasons to be happy. Happy birthday, my little star!</p>
  </div>
+
  <div class="card">
   <img class="photo" src="AP000263.jpg" alt="Dada">
-  <h3>Dada ⭐</h3>
+  <h3 class="name">Dada's Wishes ⭐</h3>
+  <p>Keep dreaming big and believing in yourself. May every new year bring you new opportunities, unforgettable memories, and the courage to achieve everything you want. Keep shining!</p>
  </div>
+
  <div class="card">
   <img class="photo" src="HR6_4652.jpg" alt="Vahini">
-  <h3>Vahini 🌸</h3>
+  <h3 class="name">A Letter from Vahini 🥹💗</h3>
+  <p>My dearest Bhagyashree, when I became part of this family, I never knew I would find such a special bond in you. You are more than my nanad; you are my little sister by heart.</p>
+  <button class="lav" onclick="showPage('letters');openLetter('vahini')">Read My Full Letter 💌</button>
  </div>
+
  <div class="card">
-  <img class="photo" src="YSW02029.jpg" alt="Sister memory">
-  <h3>A Special Memory 💕</h3>
+  <img class="photo" src="YSW02029.jpg" alt="A special memory">
+  <h3 class="name">A Note from Your Sister 💗</h3>
+  <p>I hope life gives you a thousand reasons to smile, people who understand your heart, and the courage to follow your dreams. You deserve beautiful things, today and always.</p>
  </div>
+
  <div class="card">
-  <img class="photo" src="AP000252.jpg" alt="Sister memory">
-  <h3>Keep Shining ✨</h3>
+  <img class="photo" src="AP000252.jpg" alt="A special memory">
+  <h3 class="name">Keep Shining, Beautiful ✨</h3>
+  <p>Never forget how loved you are. May your future be filled with little joys, big achievements, peaceful days, and memories you will treasure forever.</p>
  </div>
- <button onclick="showPage('letters')">Next: Love Letters 💌</button>
- <button class="secondary" onclick="showPage('home')">← Home</button>
+ <button onclick="showPage('letters')">Next: Family Letters 💌</button>
+ <button class="lav" onclick="showPage('home')">← Home</button>
 </section>
 
 <section id="letters" class="page">
- <div class="emoji">💌 💗 💌</div>
- <h1>Letters From Our Hearts</h1>
- <p>Tap each button to read a special message.</p>
+ <div class="emoji">💌 🌸 💌</div><h1>Letters From Our Hearts</h1>
+ <p>Choose a name to open a special message. ♡</p>
  <div class="grid">
-  <div class="tile">👨 Baba<br><button onclick="openLetter('baba')">Open Letter</button></div>
-  <div class="tile">👩 Aai<br><button onclick="openLetter('aai')" class="secondary">Open Letter</button></div>
-  <div class="tile">🌷 Tai<br><button onclick="openLetter('tai')">Open Letter</button></div>
-  <div class="tile">⭐ Dada<br><button onclick="openLetter('dada')" class="secondary">Open Letter</button></div>
-  <div class="tile">🦋 Vahini<br><button onclick="openLetter('vahini')">Open Letter</button></div>
-  <div class="tile">💗 Sister<br><button onclick="openLetter('sister')" class="secondary">Open Letter</button></div>
-  <div class="tile">💑 Bhaiya & Bhabhi<br><button onclick="openLetter('couple')" class="cream">Open Letter</button></div>
+  <div class="tile">👨<p>Baba</p><button onclick="openLetter('baba')">Open</button></div>
+  <div class="tile">👩<p>Aai</p><button class="lav" onclick="openLetter('aai')">Open</button></div>
+  <div class="tile">🌷<p>Tai</p><button onclick="openLetter('tai')">Open</button></div>
+  <div class="tile">⭐<p>Dada</p><button class="lav" onclick="openLetter('dada')">Open</button></div>
+  <div class="tile">🦋<p>Vahini</p><button class="gold" onclick="openLetter('vahini')">Open</button></div>
+  <div class="tile">💗<p>Sister</p><button onclick="openLetter('sister')">Open</button></div>
+  <div class="tile">💑<p>Bhaiya & Bhabhi</p><button class="lav" onclick="openLetter('couple')">Open</button></div>
  </div>
  <div id="letterBox" class="card hidden">
   <div class="emoji">💗</div><h2 id="letterTitle"></h2><p id="letterText"></p>
-  <button class="secondary" onclick="closeLetter()">Close Letter ✉️</button>
+  <button class="lav" onclick="closeLetter()">Close Letter ✉️</button>
  </div>
- <button class="cream" onclick="showPage('wishes')">Next: Make a Wish 🌠</button>
- <button class="secondary" onclick="showPage('home')">← Home</button>
+ <button class="gold" onclick="showPage('wishes')">Make a Wish 🌠</button>
+ <button class="lav" onclick="showPage('home')">← Home</button>
 </section>
 
 <section id="wishes" class="page">
  <div class="hero">
-  <div class="emoji">🌷 🧁 🌷</div>
-  <h1>Make a Birthday Wish</h1>
-  <p>Take a deep breath, close your eyes, and think of something your heart truly wants. ✨</p>
-  <input id="wishInput" placeholder="Write your secret wish here...">
-  <br><button onclick="saveWish()">Keep My Wish Secret 💗</button>
+  <div class="emoji">🌷 🧁 🌷</div><h1>Make a Birthday Wish</h1>
+  <p>Close your eyes, take a deep breath, and think of the dream closest to your heart. ✨</p>
+  <input id="wishInput" placeholder="Write your secret wish...">
+  <br><button onclick="saveWish()">Wrap My Wish in Magic 💗</button>
   <p id="wishResult" class="hidden"></p>
   <p class="small">Your wish stays on this page while it's open.</p>
-  <button class="secondary" onclick="showPage('surprise')">Go to Your Surprise 🎁</button>
+  <button class="lav" onclick="showPage('surprise')">Find Your Gift 🎁</button>
  </div>
 </section>
 
 <section id="surprise" class="page">
- <div class="hero">
-  <div class="emoji">🎁 🎀 🧸</div>
-  <h1>One Last Little Surprise!</h1>
-  <p>There is something we want you to remember, today and always...</p>
-  <button class="cream" onclick="reveal()">Open Your Gift 💝</button>
-  <div id="gift" class="hidden">
-   <div class="card">
-    <div class="emoji">💖🌸💖</div>
-    <h2>You Are So Loved!</h2>
-    <p>Dear Bhagyashree, wherever life takes you, remember that you will always have people cheering for you, believing in you, and wishing the very best for you.</p>
-    <p>May your days be filled with laughter, your heart with peace, and your future with beautiful surprises.</p>
-    <h2>Happy Birthday! 🎂</h2>
-    <p>With all our love, always and forever. ♡</p>
+ <div class="emoji">🎀 🎁 🎀</div>
+ <h1>Your Magical Gift</h1>
+ <p>Something soft, sweet, and full of love is waiting for you. 🥹</p>
+ <div class="gift-scene">
+  <div class="lights" id="lights"></div>
+  <div class="teddy-area">
+   <div class="giftbox" id="giftBox">🎁</div>
+   <button class="gold" id="openGift" onclick="openTeddy()">Open Your Gift 💝</button>
+   <div id="teddyReveal" class="hidden">
+    <div class="teddy">
+     <div class="ear left"></div><div class="ear right"></div>
+     <div class="head">
+      <div class="eye left"></div><div class="eye right"></div>
+      <div class="cheek left"></div><div class="cheek right"></div>
+      <div class="muzzle"></div><div class="nose"></div>
+     </div>
+     <div class="bow"><span></span></div>
+     <div class="arm left"></div><div class="arm right"></div>
+     <div class="bodybear"><div class="belly"></div></div>
+     <div class="foot left"></div><div class="foot right"></div>
+    </div>
+    <div class="teddy-label">A Little Teddy, A Lot of Love 🧸</div>
+    <p>Sending you the biggest virtual hug! 💗</p>
    </div>
   </div>
-  <button class="secondary" onclick="showPage('home')">Back to Home 🏠</button>
  </div>
+
+ <div class="card">
+  <div class="emoji">💌</div>
+  <h2>A Little Message for You</h2>
+  <p>Dear Bhagyashree, no gift could ever be as special as the happiness you bring into our lives. May you always feel loved, protected, appreciated, and surrounded by people who want to see you smile.</p>
+  <p>Keep your dreams big and your heart kind. You deserve every beautiful thing life has to offer. 🌷</p>
+  <h2>Happy Birthday! 🎂💗</h2>
+ </div>
+ <button class="lav" onclick="showPage('home')">Back to Home 🏠</button>
 </section>
 </main>
 
-<footer>Made with ♡ and lots of love 🎀</footer>
+<footer>Made with ♡, hugs, and fairy lights for Bhagyashree 🎀</footer>
 
 <script>
 function showPage(id){
@@ -195,19 +308,19 @@ const letters={
  },
  aai:{
   title:"Aai's Blessings 🌷",
-  text:"माझ्या लाडक्या लेकीला वाढदिवसाच्या खूप खूप शुभेच्छा! देव तुला नेहमी सुखी, निरोगी आणि आनंदी ठेवो. तुझ्या आयुष्यातील प्रत्येक दिवस सुंदर जावो आणि तुझ्या सर्व स्वप्नांना पूर्ण होण्याचं बळ मिळो. माझे आशीर्वाद आणि प्रेम नेहमी तुझ्यासोबत आहेत."
+  text:"माझ्या लाडक्या लेकीला वाढदिवसाच्या खूप खूप शुभेच्छा! देव तुला नेहमी सुखी, निरोगी आणि आनंदी ठेवो. तुझ्या आयुष्यातील प्रत्येक दिवस सुंदर जावो आणि तुझी सर्व स्वप्नं पूर्ण होवोत. माझे आशीर्वाद आणि प्रेम नेहमी तुझ्यासोबत आहेत."
  },
  tai:{
   title:"A Message from Tai 💕",
-  text:"No matter how much we grow up, you will always be someone I want to support and see smiling. May this year bring you beautiful opportunities, genuine happiness, and everything your heart wishes for. Happy birthday, little star!"
+  text:"No matter how much we grow up, you will always be someone I want to support and see smiling. May this year bring you beautiful opportunities, genuine happiness, and everything your heart wishes for. Happy birthday, my little star!"
  },
  dada:{
   title:"A Message from Dada ⭐",
   text:"Keep dreaming big, keep smiling, and never stop believing in yourself. May you always have the courage to chase your dreams and the happiness you deserve. Wishing you an amazing birthday and a beautiful year ahead!"
  },
  vahini:{
-  title:"A Message from Vahini 🌸",
-  text:"You deserve all the love, laughter, and wonderful surprises life has to offer. Never forget how special you are to everyone around you. May your smile shine brighter with every passing year. Happy birthday!"
+  title:"From Your Vahini, With All My Heart 🥹💗",
+  text:"My dearest Bhagyashree,\n\nWhen I became a part of this family, I didn't know that I would also find such a beautiful bond in you. Somewhere along the way, you became more than just my nanad — you became someone I can care for, worry about, pray for, and love like my own little sister.\n\nMaybe I won't always be able to express everything I feel, but please remember that you will always have a special place in my heart. I wish I could protect you from every hurt, wipe away every tear before it falls, and make sure life always treats you gently.\n\nWhenever the world feels difficult, I hope you remember that you have one more person standing beside you, cheering for you and wishing happiness for you with all her heart.\n\nAs your Vahini, one of my biggest wishes is to see you grow, achieve your dreams, find your happiness, and never feel alone. I may not have known you since your childhood, but I promise to cherish the bond we build from here on.\n\nYou didn't just become my husband's sister; you became my own little sister by heart. No matter how much you grow up, a part of me will always want to pamper you, protect you, and see that beautiful smile on your face.\n\nHappy Birthday, my dearest Bhagyashree. May life give you all the happiness your beautiful heart deserves. I love you more than these words can ever explain. 🥹❤️\n\nWith endless love,\nYour Vahini 🌷"
  },
  sister:{
   title:"A Little Note from Your Sister 💗",
@@ -215,7 +328,7 @@ const letters={
  },
  couple:{
   title:"From Bhaiya & Bhabhi 💌",
-  text:"Dear Bhagyashree, you will always have a special place in our hearts. We wish you a life full of love, confidence, good health, beautiful memories, and dreams that come true. Keep smiling, keep growing, and keep being YOU! With lots of love and hugs, Bhaiya & Bhabhi ❤️"
+  text:"Dear Bhagyashree, you will always have a special place in our hearts. We wish you a life full of love, confidence, good health, beautiful memories, and dreams that come true. May you always feel supported and appreciated. Keep smiling, keep growing, and keep being YOU! With lots of love and hugs, Bhaiya & Bhabhi ❤️"
  }
 };
 function openLetter(id){
@@ -226,14 +339,25 @@ function openLetter(id){
 }
 function closeLetter(){document.getElementById('letterBox').classList.add('hidden')}
 function saveWish(){
- const v=document.getElementById('wishInput').value.trim();
- const r=document.getElementById('wishResult');
- r.textContent=v?"Your wish has been wrapped in a little bit of magic. May it come true! 🌟💗":"Make a little wish first, birthday girl! 🌷";
- r.classList.remove('hidden');
+ const value=document.getElementById('wishInput').value.trim();
+ const result=document.getElementById('wishResult');
+ result.textContent=value
+  ?"Your wish is wrapped in a little bit of magic. May it find its way to you! 🌟💗"
+  :"Make a little wish first, birthday girl! 🌷";
+ result.classList.remove('hidden');
 }
-function reveal(){
- document.getElementById('gift').classList.remove('hidden');
- document.getElementById('gift').scrollIntoView({behavior:'smooth',block:'center'});
+function openTeddy(){
+ document.getElementById('giftBox').classList.add('hidden');
+ document.getElementById('openGift').classList.add('hidden');
+ document.getElementById('teddyReveal').classList.remove('hidden');
+}
+for(let i=0;i<38;i++){
+ const bulb=document.createElement('span');
+ bulb.className='bulb';
+ bulb.style.left=(4+Math.random()*92)+'%';
+ bulb.style.top=(3+Math.random()*90)+'%';
+ bulb.style.animationDelay=(Math.random()*2)+'s';
+ document.getElementById('lights').appendChild(bulb);
 }
 </script>
 </body>
